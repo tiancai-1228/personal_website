@@ -24,7 +24,7 @@ const home: NextPage = () => {
             <h1 className={styles.h1}>- Robby Hong -</h1>
             <h2 className={styles.h2}>Web Designer</h2>
             <p className={styles.text}>
-              i m a Tunisian based web designer front‑end developer focused on
+              i m a shoalter web designer front‑end developer focused on
               crafting clean user‑friendly experiences, I am passionate about
               building excellent software that improves the lives of those
               around me.
