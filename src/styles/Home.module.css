@@ -106,6 +106,13 @@
 }
 
 @media (max-width: 1140px) {
+  .bg {
+    display: none;
+  }
+  .logo {
+    width: 10%;
+    height: 10%;
+  }
   .h1 {
     margin: 0;
   }
