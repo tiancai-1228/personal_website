@@ -13,7 +13,7 @@ const index: NextPage = () => {
       case "HOME":
         return <Home />;
       case "ABOUT":
-        return <About />;
+        return <Home />;
       default:
         return <Home />;
     }
