@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import styles from "../styles/404.module.css";
-function NotFund() {
+const NotFund = () => {
   return (
     <div className={styles.notFund}>
       <h1>Ooops...</h1>
@@ -14,6 +14,6 @@ function NotFund() {
       </p>
     </div>
   );
-}
+};
 
 export default NotFund;
