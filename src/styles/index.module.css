@@ -1,0 +1,6 @@
+.Navigation {
+  position: fixed;
+  z-index: 11;
+  right: 3%;
+  top: 25%;
+}
