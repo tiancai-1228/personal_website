@@ -2,8 +2,8 @@
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import Robby from "../image/robby.jpg";
-import Image from "next/image";
 import ArrowForwardOutline from "../image/arrow-forward-outline.svg";
+import MoreButtom from "../componet/moreButtom";
 
 const home: NextPage = () => {
   return (
@@ -29,16 +29,8 @@ const home: NextPage = () => {
               building excellent software that improves the lives of those
               around me.
             </p>
-            <div className={styles.more}>
-              <p>More About Me</p>
-              <span className={styles.moreIcon}>
-                <Image
-                  src={ArrowForwardOutline}
-                  height={30}
-                  width={30}
-                  alt={"home"}
-                ></Image>
-              </span>
+            <div className={styles.moreBtn}>
+              <MoreButtom img={ArrowForwardOutline} text={"More About Me"} />
             </div>
           </div>
         </div>

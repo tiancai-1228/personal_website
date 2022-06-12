@@ -7,13 +7,13 @@ import Home from "./home";
 import About from "./about";
 
 const index: NextPage = () => {
-  const [currentTab, setCurrentTab] = useState("HOME");
+  const [currentTab, setCurrentTab] = useState("ABOUT");
   const currentPage = () => {
     switch (currentTab) {
       case "HOME":
         return <Home />;
       case "ABOUT":
-        return <Home />;
+        return <About />;
       default:
         return <Home />;
     }
