@@ -2,6 +2,8 @@ import React from "react";
 import styles from "../styles/about.module.css";
 import ArrowForwardOutline from "../image/arrow-forward-outline.svg";
 import MoreButtom from "../componet/moreButtom";
+import Image from "next/image";
+import BriefcaseSharp from "../image/briefcase-outline.svg";
 
 const about = () => {
   return (
@@ -94,9 +96,77 @@ const about = () => {
 
           <div className={styles.experience}>
             <h2>EXPERIENCE & EDUCATION</h2>
-            <div>
+            <div className={styles.flex}>
               <ul>
-                <li>123</li>
+                <li>
+                  <div className={styles.icon}>
+                    <Image
+                      src={BriefcaseSharp}
+                      height={20}
+                      width={20}
+                      alt={"PORTFOLIO"}
+                    ></Image>
+                  </div>
+                  <div className={styles.experience_content}>
+                    <span className={styles.experience_year}>
+                      2021 ~ present
+                    </span>
+                    <div className={styles.experience_flex}>
+                      <h3>Frontend Developer</h3>
+                      <span className={styles.experience_detail}>
+                        - Shoalter Technology
+                      </span>
+                    </div>
+
+                    <p>
+                      - 與 PM 和 UX/UI
+                      溝通來完成電商業⾯與後台CMS⾴⾯開發需求和⽬標功能
+                    </p>
+                    <p>- 與後端⼈員溝通合作來完成CMS後台⾴⾯開發與串接API</p>
+                  </div>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <div className={styles.icon}>
+                    <Image
+                      src={BriefcaseSharp}
+                      height={20}
+                      width={20}
+                      alt={"PORTFOLIO"}
+                    ></Image>
+                  </div>
+                  <div className={styles.experience_content}>
+                    <span className={styles.experience_year}>2017 ~ 2021</span>
+                    <div className={styles.experience_flex}>
+                      <h3>國立勤益科技大學</h3>
+                      <span className={styles.experience_detail}>
+                        - 資訊工程學系
+                      </span>
+                    </div>
+                    <p>
+                      大學期間有參加系學會參與各個活動，由於參加許多活動與系學會讓我學會規劃一個企劃分配工作等等，
+                      以及與工作夥伴溝通的還有臨機應變重要性。
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div className={styles.icon}>
+                    <Image
+                      src={BriefcaseSharp}
+                      height={20}
+                      width={20}
+                      alt={"PORTFOLIO"}
+                    ></Image>
+                  </div>
+                  <div className={styles.experience_content}>
+                    <span className={styles.experience_year}>2014 ~ 2017</span>
+                    <div className={styles.experience_flex}>
+                      <h3>桃園新興高中</h3>
+                      <span className={styles.experience_detail}>- 資訊科</span>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>

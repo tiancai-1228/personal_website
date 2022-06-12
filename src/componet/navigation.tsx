@@ -13,8 +13,6 @@ interface navigationProp {
 }
 
 const navigation = ({ currentTab, setCurrentTab }: navigationProp) => {
-  //   const [currentTab, setCurrentTab] = useState("HOME");
-
   return (
     <div className={styles.container}>
       <ul>
