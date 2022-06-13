@@ -27,10 +27,9 @@ const home = ({ setCurrentTab }: homeProp) => {
             <h1 className={styles.h1}>- Robby Hong -</h1>
             <h2 className={styles.h2}>Web Designer</h2>
             <p className={styles.text}>
-              i m a shoalter web designer front‑end developer focused on
-              crafting clean user‑friendly experiences, I am passionate about
-              building excellent software that improves the lives of those
-              around me.
+              {`Hi, I am a  front-end developer focusing on
+               writing clean code and developing scalable and highly compatible components, providing intuitive interface and good
+                user experience`}
             </p>
             <div className={styles.moreBtn}>
               <MoreButtom
