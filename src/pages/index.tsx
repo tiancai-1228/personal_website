@@ -5,16 +5,19 @@ import styles from "../styles/index.module.css";
 import Navigation from "../componet/navigation";
 import Home from "./home";
 import About from "./about";
+import Portfolio from "./portfolio";
 import Contact from "./contact";
 
 const index: NextPage = () => {
-  const [currentTab, setCurrentTab] = useState("CONTACT");
+  const [currentTab, setCurrentTab] = useState("PORTFOLIO");
   const currentPage = () => {
     switch (currentTab) {
       case "HOME":
         return <Home />;
       case "ABOUT":
         return <About />;
+      case "PORTFOLIO":
+        return <Portfolio />;
       case "CONTACT":
         return <Contact />;
       default:

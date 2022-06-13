@@ -1,0 +1,132 @@
+.card {
+  width: 350px;
+  height: 450px;
+  border-radius: 10px;
+  border: 2px solid #111;
+  /* border: 1px solid red; */
+  overflow: hidden;
+}
+.header {
+  width: 350px;
+  height: 45%;
+  border-bottom: 5px solid #ffb400;
+}
+
+.header_img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  transition: 1s;
+}
+
+.card:hover .header_img {
+  background-size: 150%;
+}
+
+.content {
+  width: 350px;
+  height: 40%;
+  padding: 15px;
+  color: #fff;
+  background: #323232;
+}
+.content h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+.content p {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 10px 0;
+}
+
+.content span {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 10px 0;
+  color: #999;
+}
+
+.footer {
+  width: 350px;
+  height: 15%;
+  color: #fff;
+  background: #323232;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+}
+
+.btn {
+  position: relative;
+  background: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  padding: 10px 0;
+  transition: 0.5s;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn:hover {
+  letter-spacing: 0.2em;
+  box-shadow: 0 0 35px #1e9bff;
+  color: #1e9bff;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #27282c;
+}
+
+.btn span {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.box {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: -3.5px;
+  left: 80%;
+  height: 5px;
+  width: 10px;
+  border: 2px solid #1e9bff;
+  background: #27282c;
+  transition: 0.5s;
+}
+
+.btn:hover .box::before {
+  left: 10%;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  bottom: -3.5px;
+  left: 10%;
+  height: 5px;
+  width: 10px;
+  border: 2px solid #1e9bff;
+  background: #27282c;
+  transition: 0.5s;
+}
+
+.btn:hover .box::after {
+  left: 80%;
+}

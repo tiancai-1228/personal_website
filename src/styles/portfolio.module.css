@@ -1,0 +1,17 @@
+.container {
+  width: 80%;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding: 50px 0px 50px 0px;
+  font-size: 2em;
+}
+.title span {
+  color: #ffb400;
+}
