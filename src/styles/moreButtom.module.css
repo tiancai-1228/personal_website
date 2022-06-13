@@ -52,4 +52,7 @@
   .more {
     width: 200px;
   }
+  .more p {
+    font-size: 14px;
+  }
 }
