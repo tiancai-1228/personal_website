@@ -1,9 +1,9 @@
 import Aprd from "../image/aprd.png";
 import Ecomart from "../image/ecomart.png";
-import BLOG from "../image/blog.png";
+import BLOG from "../image/BLOG.png";
 import Coffee from "../image/coffee.png";
-import MESSAGE from "../image/message.png";
-import TAIPEI from "../image/taipei.png";
+import MESSAGE from "../image/MESSAGE.png";
+import TAIPEI from "../image/TAIPEI.png";
 const project = [
   {
     img: Ecomart.src,
