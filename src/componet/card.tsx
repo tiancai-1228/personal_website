@@ -3,7 +3,7 @@ import styles from "../styles/card.module.css";
 import Image, { StaticImageData } from "next/image";
 
 interface cardProp {
-  img: StaticImageData;
+  img: string;
   title: string;
   text: string;
   Stack: string;
@@ -29,7 +29,7 @@ const card = ({
           <div
             className={styles.header_img}
             style={{
-              backgroundImage: `url(${img.src})`,
+              backgroundImage: `url(${img})`,
             }}
           ></div>
         </div>
