@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import styles from "../styles/navigation.module.css";
 import Image from "next/image";
 import HomeOutline from "../image/home-outline.svg";
-import BriefcaseSharp from "../image/briefcase-outline.svg";
-import MailSharp from "../image/mail-outline.svg";
-import PersonSharp from "../image/person-outline.svg";
+import Icons8Portfolio from "../image/icons8-portfolio.png";
+import MailSharp from "../image/mail-outline.png";
+import PersonSharp from "../image/person-outline.png";
 
 interface navigationProp {
   currentTab: string;
@@ -70,7 +70,7 @@ const navigation = ({ currentTab, setCurrentTab }: navigationProp) => {
             <span className={styles.text}>PORTFOLIO</span>
             <span className={styles.icon}>
               <Image
-                src={BriefcaseSharp}
+                src={Icons8Portfolio}
                 height={25}
                 width={25}
                 alt={"PORTFOLIO"}

@@ -8,7 +8,7 @@ import About from "./about";
 import Contact from "./contact";
 
 const index: NextPage = () => {
-  const [currentTab, setCurrentTab] = useState("ABOUT");
+  const [currentTab, setCurrentTab] = useState("CONTACT");
   const currentPage = () => {
     switch (currentTab) {
       case "HOME":
