@@ -28,8 +28,7 @@ const home = ({ setCurrentTab }: homeProp) => {
             <h2 className={styles.h2}>Web Designer</h2>
             <p className={styles.text}>
               {`Hi, I am a  front-end developer focusing on
-               writing clean code and developing scalable and highly compatible components, providing intuitive interface and good
-                user experience`}
+               writing clean code and developing scalable and highly compatible components,as well as a good user experience`}
             </p>
             <div className={styles.moreBtn}>
               <MoreButtom
