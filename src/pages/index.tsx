@@ -26,9 +26,11 @@ const index: NextPage = () => {
   };
   return (
     <>
-      <div className={styles.container}>{currentPage()}</div>
-      <div className={styles.Navigation}>
-        <Navigation currentTab={currentTab} setCurrentTab={setCurrentTab} />
+      <div className={styles.container}>
+        {currentPage()}
+        <div className={styles.Navigation}>
+          <Navigation currentTab={currentTab} setCurrentTab={setCurrentTab} />
+        </div>
       </div>
     </>
   );
