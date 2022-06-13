@@ -21,7 +21,6 @@ const card = ({
   SourceCode,
   onClick,
 }: cardProp) => {
-  console.log(img);
   return (
     <>
       <div className={styles.card} onClick={onClick}>

@@ -4,8 +4,11 @@ import styles from "../styles/Home.module.css";
 import Robby from "../image/robby.jpg";
 import ArrowForwardOutline from "../image/arrow-forward-outline.svg";
 import MoreButtom from "../componet/moreButtom";
+interface homeProp {
+  setCurrentTab: React.Dispatch<React.SetStateAction<string>>;
+}
 
-const home: NextPage = () => {
+const home = ({ setCurrentTab }: homeProp) => {
   return (
     <>
       <div className={styles.container}>
@@ -30,7 +33,13 @@ const home: NextPage = () => {
               around me.
             </p>
             <div className={styles.moreBtn}>
-              <MoreButtom img={ArrowForwardOutline} text={"More About Me"} />
+              <MoreButtom
+                img={ArrowForwardOutline}
+                text={"More About Me"}
+                onClick={() => {
+                  setCurrentTab("ABOUT");
+                }}
+              />
             </div>
           </div>
         </div>

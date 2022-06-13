@@ -25,18 +25,19 @@ const about = () => {
                     First Name :<span> Robby</span>
                   </li>
                   <li>
-                    Age : <span>23 Years</span>
+                    Last Name : <span>Hong</span>
                   </li>
                   <li>
-                    Address : <span>Taoyuan , Taipei</span>
+                    Age : <span>23 Years</span>
                   </li>
+
                   <li>
                     langages : <span>Chinese , English</span>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    Last Name : <span>Hong</span>
+                    Address : <span>Taoyuan , Taipei</span>
                   </li>
                   <li>
                     Nationality : <span>Taiwan</span>

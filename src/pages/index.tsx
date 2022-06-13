@@ -9,11 +9,11 @@ import Portfolio from "./portfolio";
 import Contact from "./contact";
 
 const index: NextPage = () => {
-  const [currentTab, setCurrentTab] = useState("PORTFOLIO");
+  const [currentTab, setCurrentTab] = useState("HOME");
   const currentPage = () => {
     switch (currentTab) {
       case "HOME":
-        return <Home />;
+        return <Home setCurrentTab={setCurrentTab} />;
       case "ABOUT":
         return <About />;
       case "PORTFOLIO":
@@ -21,16 +21,16 @@ const index: NextPage = () => {
       case "CONTACT":
         return <Contact />;
       default:
-        return <Home />;
+        return <Home setCurrentTab={setCurrentTab} />;
     }
   };
   return (
-    <div className={styles.container}>
-      {currentPage()}
+    <>
+      <div className={styles.container}>{currentPage()}</div>
       <div className={styles.Navigation}>
         <Navigation currentTab={currentTab} setCurrentTab={setCurrentTab} />
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,10 +1,10 @@
 .container {
   background-color: #111;
+  height: 100%;
 }
 
 .Navigation {
   position: fixed;
-  z-index: 11;
   right: 3%;
   top: 25%;
 }
@@ -12,7 +12,6 @@
   .Navigation {
     position: fixed;
     width: 100%;
-    z-index: 11;
     left: 0;
     bottom: 0;
     display: flex;

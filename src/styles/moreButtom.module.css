@@ -6,6 +6,7 @@
   justify-content: space-between;
   border-radius: 50px;
   border: 1px solid #ffb400;
+  z-index: 20;
 }
 
 .more:after {
