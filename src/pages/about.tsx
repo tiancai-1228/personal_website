@@ -16,7 +16,7 @@ const about = () => {
               ABOUT <span>ME</span>
             </h1>
           </div>
-          <div className={styles.flex}>
+          <div className={styles.flex_box}>
             <div className={styles.person}>
               <div>
                 <h2>PERSONAL INFOS</h2>
