@@ -25,28 +25,29 @@
   border: 1px solid white;
   font-size: 32px;
   position: absolute;
+  transition: all 1s;
 }
 
 .Left {
-  right: 125px !important;
+  right: 90px !important;
   transform: rotateY(-90deg);
   animation: Left 5s infinite;
 }
 
 .Right {
-  left: 125px !important;
+  left: 90px !important;
   transform: rotateY(90deg);
   animation: Right 5s infinite;
 }
 
 .Top {
-  bottom: 125px !important;
+  bottom: 90px !important;
   transform: rotateX(90deg);
   animation: Top 5s infinite;
 }
 
 .Bottom {
-  top: 125px !important;
+  top: 90px !important;
   transform: rotateX(-90deg);
   animation: Bottom 5s infinite;
 }
@@ -60,25 +61,29 @@
 }
 
 .box:hover .Left {
-  right: 90px !important;
+  right: 125px !important;
+
   color: #ffb400 !important;
 }
 .box:hover .Right {
-  left: 90px !important;
+  left: 125px !important;
   color: #ffb400 !important;
 }
 .box:hover .Top {
-  bottom: 90px !important;
+  bottom: 125px !important;
   color: #ffb400 !important;
 }
 .box:hover .Bottom {
-  top: 90px !important;
+  top: 125px !important;
+
   color: #ffb400 !important;
 }
 .box:hover .Front {
+  transform: translateZ(125px);
   color: #ffb400 !important;
 }
 .box:hover .Back {
+  transform: translateZ(-125px);
   color: #ffb400 !important;
 }
 
