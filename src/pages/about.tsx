@@ -4,6 +4,7 @@ import ArrowForwardOutline from "../image/arrow-forward-outline.svg";
 import MoreButtom from "../componet/moreButtom";
 import Image from "next/image";
 import BriefcaseSharp from "../image/briefcase-outline.svg";
+import Box from "../componet/box";
 
 const about = () => {
   return (
@@ -15,7 +16,7 @@ const about = () => {
               ABOUT <span>ME</span>
             </h1>
           </div>
-          <div>
+          <div className={styles.flex}>
             <div className={styles.person}>
               <div>
                 <h2>PERSONAL INFOS</h2>
@@ -55,7 +56,9 @@ const about = () => {
               </div>
             </div>
 
-            <div className={styles.box}></div>
+            <div className={styles.box}>
+              <Box />
+            </div>
           </div>
 
           <div className={styles.skill}>
@@ -109,7 +112,7 @@ const about = () => {
                   </div>
                   <div className={styles.experience_content}>
                     <span className={styles.experience_year}>
-                      2021 ~ present
+                      2021 ~ PRESENT
                     </span>
                     <div className={styles.experience_flex}>
                       <h3>Frontend Developer</h3>
