@@ -1,4 +1,6 @@
-import React from "react";
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import styles from "../styles/contact.module.css";
 import Image from "next/image";
 import MailOutline from "../image/mail-outline.png";
@@ -8,8 +10,72 @@ import Icons8Instagram from "../image/icons8-instagram.svg";
 import Icons8LinkedinCircled from "../image/icons8-linkedin-circled.svg";
 import ArrowForwardOutline from "../image/arrow-forward-outline.svg";
 import MoreButtom from "../componet/moreButtom";
+import Env from "../env";
 
+interface emailProp {
+  name: string | null;
+  email: string | null;
+  subject: string | null;
+  message: string | null;
+}
 const contact = () => {
+  const [emailData, setEmailData] = useState<emailProp>({
+    name: null,
+    email: null,
+    subject: null,
+    message: null,
+  });
+
+  const inputName: any = useRef("");
+  const inputEmail: any = useRef("");
+  const inputSubject: any = useRef("");
+  const inputMessage: any = useRef("");
+
+  const sendEmail = (data: emailProp) => {
+    const { name, email, subject, message } = data;
+
+    if (name && email && subject && message) {
+      emailjs
+        .send(
+          `${Env.serviceID}`,
+          `${Env.templateID}`,
+          {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message,
+          },
+          `${Env.publicKey}`
+        )
+        .then(
+          (result) => {
+            alert("sendEmail success");
+          },
+          (error) => {
+            console.log(error);
+            alert("sendEmail false");
+          }
+        );
+      inputName.current.value = "";
+      inputEmail.current.value = "";
+      inputSubject.current.value = "";
+      inputMessage.current.value = "";
+      setEmailData({
+        name: null,
+        email: null,
+        subject: null,
+        message: null,
+      });
+    } else {
+      setEmailData({
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+      });
+    }
+  };
+
   return (
     <>
       <div className={styles.container}>
@@ -33,7 +99,7 @@ const contact = () => {
                       src={MailOutline}
                       height={30}
                       width={30}
-                      alt={"mail"}
+                      alt={"email"}
                     ></Image>
                   </span>
                   <div>
@@ -105,32 +171,69 @@ const contact = () => {
               </ul>
             </div>
           </div>
+
           <div className={styles.sentEmail}>
             <div className={styles.data}>
+              <div className={styles.inputBox}>
+                <input
+                  type="text"
+                  className={styles.name}
+                  placeholder={"YOURE NAME"}
+                  ref={inputName}
+                ></input>
+                {emailData.name === "" && (
+                  <p className={styles.errorMessage}>Name is required</p>
+                )}
+              </div>
+              <div className={styles.inputBox}>
+                <input
+                  type="email"
+                  className={styles.email}
+                  placeholder={"YOURE EMAIL"}
+                  ref={inputEmail}
+                ></input>
+                {emailData.email === "" && (
+                  <p className={styles.errorMessage}>Email is Required</p>
+                )}
+              </div>
+            </div>
+            <div className={styles.inputBox}>
               <input
                 type="text"
-                className={styles.name}
-                placeholder={"YOURE NAME"}
+                className={styles.subject}
+                placeholder={"YOURE SUBJECT"}
+                ref={inputSubject}
               ></input>
-              <input
-                type="email"
-                className={styles.email}
-                placeholder={"YOURE EMAIL"}
-              ></input>
+              {emailData.subject === "" && (
+                <p className={styles.errorMessage}>Subject is required.</p>
+              )}
             </div>
-            <input
-              type="text"
-              className={styles.subject}
-              placeholder={"YOURE SUBJECT"}
-            ></input>
-            <textarea
-              rows={4}
-              placeholder={"YOURE MESSAGE"}
-              className={styles.textarea}
-            ></textarea>
+            <div className={styles.inputBox}>
+              <textarea
+                rows={4}
+                placeholder={"YOURE MESSAGE"}
+                className={styles.textarea}
+                ref={inputMessage}
+              ></textarea>
+              {emailData.message === "" && (
+                <p className={styles.errorMessage}>Message is required.</p>
+              )}
+            </div>
+
             <div className={styles.sub}>
               <div className={styles.moreBtn}>
-                <MoreButtom img={ArrowForwardOutline} text={"SEND MESSAGE"} />
+                <MoreButtom
+                  img={ArrowForwardOutline}
+                  text={"SEND MESSAGE"}
+                  onClick={() => {
+                    sendEmail({
+                      name: inputName.current.value,
+                      email: inputEmail.current.value,
+                      subject: inputSubject.current.value,
+                      message: inputMessage.current.value,
+                    });
+                  }}
+                />
               </div>
             </div>
           </div>
