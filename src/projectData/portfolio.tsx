@@ -39,7 +39,7 @@ const project = [
     text: "以node.js來完成user登入/註冊以及確認登入狀態api，與websocket的server端都部屬於heroku，再以前端練習簡單的websocket與server串接練習實現簡易的即時聊天室，與user註冊登入登出認證等功能",
     Stack:
       "所用技能:React.js + Redux toolkit + Redux Saga + Next.js + axios+ HTML5 + CSS + TypeScrip + node.js + websocket + Antd",
-    Visit: "https://next-m35m0ovo4-tiancai-1228.vercel.app/",
+    Visit: "https://next-eight-gray.vercel.app/",
     SourceCode: "https://github.com/tiancai-1228/Chat_Blog",
   },
   {
