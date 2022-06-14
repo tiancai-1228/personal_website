@@ -5,8 +5,15 @@ import MoreButtom from "../componet/moreButtom";
 import Image from "next/image";
 import Icons8Portfolio from "../image/icons8-portfolio.png";
 import Box from "../componet/box";
+import { saveAs } from "file-saver";
 
 const about = () => {
+  const saveFile = () => {
+    saveAs(
+      "https://www.cakeresume.com/pdf/s--ZlxUgAxvYYGQt7FXR3kPUw--/MMOEx.pdf",
+      "Robby.pdf"
+    );
+  };
   return (
     <>
       <div className={styles.container}>
@@ -52,7 +59,13 @@ const about = () => {
               </div>
             </div>
             <div className={styles.btn}>
-              <MoreButtom img={ArrowForwardOutline} text={"DOWNLOAD CV"} />
+              <MoreButtom
+                img={ArrowForwardOutline}
+                text={"DOWNLOAD CV"}
+                onClick={() => {
+                  saveFile();
+                }}
+              />
             </div>
           </div>
 
