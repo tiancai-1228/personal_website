@@ -10,7 +10,6 @@ import Icons8Instagram from "../image/icons8-instagram.svg";
 import Icons8LinkedinCircled from "../image/icons8-linkedin-circled.svg";
 import ArrowForwardOutline from "../image/arrow-forward-outline.svg";
 import MoreButtom from "../componet/moreButtom";
-import Env from "../env";
 
 interface emailProp {
   name: string | null;
@@ -37,15 +36,15 @@ const contact = () => {
     if (name && email && subject && message) {
       emailjs
         .send(
-          `${Env.serviceID}`,
-          `${Env.templateID}`,
+          `${process.env.SERVICE_ID}`,
+          `${process.env.templateID}`,
           {
             name: name,
             email: email,
             subject: subject,
             message: message,
           },
-          `${Env.publicKey}`
+          `${process.env.publicKey}`
         )
         .then(
           (result) => {
