@@ -28,7 +28,7 @@ const project = [
   {
     img: BLOG.src,
     title: "Personal Website",
-    text: "Personal Website",
+    text: "個人靜態網站，純css動畫特效與個人資料作品集。",
     Stack: "所用技能:React.js + Next.js + HTML5 + CSS + TypeScrip + RWD",
     Visit: "https://personal-website-eta-rosy.vercel.app/",
     SourceCode: "https://github.com/tiancai-1228/personal_website",
