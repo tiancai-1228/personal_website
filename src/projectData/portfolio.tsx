@@ -30,7 +30,7 @@ const project = [
     title: "Personal Website",
     text: "Personal Website",
     Stack: "所用技能:React.js + Next.js + HTML5 + CSS + TypeScrip + RWD",
-    Visit: "personal-website-eta-rosy.vercel.app",
+    Visit: "https://personal-website-eta-rosy.vercel.app/",
     SourceCode: "https://github.com/tiancai-1228/personal_website",
   },
   {
