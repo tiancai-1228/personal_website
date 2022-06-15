@@ -59,12 +59,16 @@
   border-radius: 30px;
   background-color: #ffb400;
 }
-.container ul li:hover .icon {
-  background-color: #ffb400;
-}
+
 .container ul li:hover .text {
   opacity: 1;
   margin-right: 10px;
+}
+
+@media (min-width: 1140px) {
+  .container ul li:hover .icon {
+    background-color: #ffb400;
+  }
 }
 
 @media (max-width: 1140px) {
