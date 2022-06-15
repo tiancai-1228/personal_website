@@ -9,6 +9,21 @@
   z-index: 999;
   top: 25%;
 }
+
+.CheckBox {
+  position: absolute;
+  right: 3%;
+  z-index: 999;
+  top: 10%;
+  width: 130px;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.CheckBox span {
+  text-shadow: 2px 2px 4px pink;
+}
 @media (max-width: 1140px) {
   .Navigation {
     position: fixed;
@@ -16,5 +31,20 @@
     top: auto;
     left: 0;
     bottom: 0px;
+  }
+
+  .CheckBox {
+    position: absolute;
+    right: 2%;
+    z-index: 999;
+    top: 1%;
+    width: 90px;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+  }
+  .CheckBox span {
+    text-shadow: 2px 2px 4px pink;
+    font-size: 12px;
   }
 }

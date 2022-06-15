@@ -1,0 +1,56 @@
+.container {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background: #3e3e3e;
+  box-shadow: 0 0 0 2px #303030;
+  border-radius: 75px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container input {
+  z-index: 999;
+  opacity: 0;
+  width: 60px;
+  height: 30px;
+  border-radius: 75px;
+}
+
+.container span {
+  position: absolute;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background-color: #ffb400;
+}
+
+.container span:hover {
+  box-shadow: 0 0 5px 5px #6d6d6d;
+}
+
+.container input:hover ~ span {
+  box-shadow: 0 0 5px 5px #6d6d6d;
+}
+
+.container input:checked ~ span {
+  left: 30px;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    width: 30px;
+    height: 15px;
+  }
+  .container span {
+    width: 15px;
+    height: 15px;
+  }
+  .container input:checked ~ span {
+    left: 15px;
+  }
+}
