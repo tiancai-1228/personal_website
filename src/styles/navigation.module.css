@@ -130,6 +130,10 @@
     background-color: rgba(221, 221, 221, 0);
   }
 
+  .container ul li:hover .icon {
+    background-color: rgba(221, 221, 221, 0);
+  }
+
   .container ul li:hover .text {
     opacity: 1;
     margin-right: 0px;

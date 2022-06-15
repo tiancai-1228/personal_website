@@ -94,6 +94,7 @@ const about = () => {
               <ul>
                 <li>RESTful API</li>
                 <li>Node.js</li>
+                <li>Express.js</li>
                 <li>Java</li>
                 <li>Spring Boot</li>
               </ul>
