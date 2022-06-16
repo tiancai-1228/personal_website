@@ -10,6 +10,7 @@ import Icons8Instagram from "../image/icons8-instagram.svg";
 import Icons8LinkedinCircled from "../image/icons8-linkedin-circled.svg";
 import ArrowForwardOutline from "../image/arrow-forward-outline.svg";
 import MoreButtom from "../componet/moreButtom";
+import { useTranslation } from "react-i18next";
 
 interface emailProp {
   name: string | null;
@@ -18,6 +19,7 @@ interface emailProp {
   message: string | null;
 }
 const contact = () => {
+  const { t } = useTranslation();
   const [emailData, setEmailData] = useState<emailProp>({
     name: null,
     email: null,
@@ -80,16 +82,13 @@ const contact = () => {
       <div className={styles.container}>
         <div className={styles.title}>
           <h1>
-            CONTACT <span>ME</span>
+            {t("CONTACT_CONTACT")} <span> {t("CONTACT_ME")} </span>
           </h1>
         </div>
         <div className={styles.content}>
           <div className={styles.info}>
-            <h3>Hi there I m Robby</h3>
-            <p>
-              Feel free to get in touch with me. Any questions or suggestions
-              welcome to contact me
-            </p>
+            <h3>{t("CONTACT_title")}</h3>
+            <p>{t("CONTACT_text")}</p>
             <div className={styles.contact}>
               <ul>
                 <li>
@@ -102,7 +101,7 @@ const contact = () => {
                     ></Image>
                   </span>
                   <div>
-                    <p>MAIL ME</p>
+                    <p>{t("CONTACT_email")}</p>
                     <span>sky0975657713@gmail.com</span>
                   </div>
                 </li>
@@ -116,7 +115,7 @@ const contact = () => {
                     ></Image>
                   </span>
                   <div>
-                    <p>CALL ME</p>
+                    <p>{t("CONTACT_call")}</p>
                     <span>0975657713</span>
                   </div>
                 </li>
@@ -177,22 +176,26 @@ const contact = () => {
                 <input
                   type="text"
                   className={styles.name}
-                  placeholder={"YOURE NAME"}
+                  placeholder={t("Email_name")}
                   ref={inputName}
                 ></input>
                 {emailData.name === "" && (
-                  <p className={styles.errorMessage}>Name is required</p>
+                  <p className={styles.errorMessage}>
+                    {t("CONTACT_required_name")}
+                  </p>
                 )}
               </div>
               <div className={styles.inputBox}>
                 <input
                   type="email"
                   className={styles.email}
-                  placeholder={"YOURE EMAIL"}
+                  placeholder={t("Email_EMAIL")}
                   ref={inputEmail}
                 ></input>
                 {emailData.email === "" && (
-                  <p className={styles.errorMessage}>Email is Required</p>
+                  <p className={styles.errorMessage}>
+                    {t("CONTACT_required_Email")}
+                  </p>
                 )}
               </div>
             </div>
@@ -200,22 +203,26 @@ const contact = () => {
               <input
                 type="text"
                 className={styles.subject}
-                placeholder={"YOURE SUBJECT"}
+                placeholder={t("Email_SUBJECT")}
                 ref={inputSubject}
               ></input>
               {emailData.subject === "" && (
-                <p className={styles.errorMessage}>Subject is required.</p>
+                <p className={styles.errorMessage}>
+                  {t("CONTACT_required_Subject")}
+                </p>
               )}
             </div>
             <div className={styles.inputBox}>
               <textarea
                 rows={4}
-                placeholder={"YOURE MESSAGE"}
+                placeholder={t("Email_MESSAGE")}
                 className={styles.textarea}
                 ref={inputMessage}
               ></textarea>
               {emailData.message === "" && (
-                <p className={styles.errorMessage}>Message is required.</p>
+                <p className={styles.errorMessage}>
+                  {t("CONTACT_required_Message")}
+                </p>
               )}
             </div>
 
@@ -223,7 +230,7 @@ const contact = () => {
               <div className={styles.moreBtn}>
                 <MoreButtom
                   img={ArrowForwardOutline}
-                  text={"SEND MESSAGE"}
+                  text={t("CONTACT_SEND")}
                   onClick={() => {
                     sendEmail({
                       name: inputName.current.value,

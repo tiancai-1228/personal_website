@@ -5,6 +5,7 @@ import Coffee from "../image/coffee.png";
 import MESSAGE from "../image/MESSAGE.png";
 import TAIPEI from "../image/TAIPEI.png";
 import Chat from "../image/chat.png";
+import { useTranslation } from "react-i18next";
 
 const project = [
   {
@@ -29,7 +30,7 @@ const project = [
     img: BLOG.src,
     title: "Personal Website",
     text: "個人靜態網站，純css動畫特效與個人資料作品集。",
-    Stack: "所用技能:React.js + Next.js + HTML5 + CSS + TypeScrip + RWD",
+    Stack: "所用技能:React.js + Next.js + 18n + TypeScrip + CSS + HTML + RWD",
     Visit: "https://personal-website-eta-rosy.vercel.app/",
     SourceCode: "https://github.com/tiancai-1228/personal_website",
   },

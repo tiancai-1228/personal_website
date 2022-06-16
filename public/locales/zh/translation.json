@@ -34,5 +34,22 @@
   "About_EDUCATION_department": "- 資訊工程學系",
   "About_EDUCATION_TEXT": "大學期間有參加系學會參與各個活動，由於參加許多活動與系學會讓我學會規劃一個企劃分配工作等等，以及與工作夥伴溝通還有臨機應變重要性。",
   "About_EDUCATION_HighSchool": "- 桃園新興高中",
-  "About_HighSchool_department": "- 資訊科"
+  "About_HighSchool_department": "- 資訊科",
+  "portfolio_MY": "我的",
+  "portfolio_PORTFOLIO": "作品集",
+  "CONTACT_CONTACT": "聯繫",
+  "CONTACT_ME": "我",
+  "CONTACT_title": "你好我是天財",
+  "CONTACT_text": "如果有任何問題或想法與建議歡迎聯繫我",
+  "CONTACT_email": "歡迎寄信給我",
+  "CONTACT_call": "歡迎打給我",
+  "CONTACT_required_name": "姓名為必填項目",
+  "CONTACT_required_Email": "信箱為必填項目",
+  "CONTACT_required_Subject": "標題為必填項目.",
+  "CONTACT_required_Message": "信息內容為必填項目",
+  "CONTACT_SEND": "寄出",
+  "Email_name": "你的姓名",
+  "Email_EMAIL": "你的信箱",
+  "Email_SUBJECT": "你的標題",
+  "Email_MESSAGE": "你的信息內容"
 }

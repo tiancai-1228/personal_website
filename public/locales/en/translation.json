@@ -34,5 +34,22 @@
   "About_EDUCATION_department": "- Computer Science & Information Engineering",
   "About_EDUCATION_TEXT": "Participating in various activities during the university period taught me how to communicate with work partners and the importance of adapting to emergencies.",
   "About_EDUCATION_HighSchool": "-  Shin Shing High School",
-  "About_HighSchool_department": "- Information Section"
+  "About_HighSchool_department": "- Information Section",
+  "portfolio_MY": "MY",
+  "portfolio_PORTFOLIO": "PORTFOLIO",
+  "CONTACT_CONTACT": "CONTACT",
+  "CONTACT_ME": "ME",
+  "CONTACT_title": "Hi there I m Robby",
+  "CONTACT_text": "   Feel free to get in touch with me. Any questions or suggestionswelcome to contact me",
+  "CONTACT_email": "MAIL ME",
+  "CONTACT_call": "CALL ME",
+  "CONTACT_required_name": "Name is required",
+  "CONTACT_required_Email": "Email is Required",
+  "CONTACT_required_Subject": "Subject is required.",
+  "CONTACT_required_Message": "Message is required",
+  "CONTACT_SEND": "SEND MESSAGE",
+  "Email_name": "YOURE NAME",
+  "Email_EMAIL": "YOURE EMAIL",
+  "Email_SUBJECT": "YOURE SUBJECT",
+  "Email_MESSAGE": "YOURE MESSAGE"
 }
