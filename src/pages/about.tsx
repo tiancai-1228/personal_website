@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import styles from "../styles/about.module.css";
 import ArrowForwardOutline from "../image/arrow-forward-outline.svg";
@@ -6,8 +7,9 @@ import Image from "next/image";
 import Icons8Portfolio from "../image/icons8-portfolio.png";
 import Box from "../componet/box";
 import { saveAs } from "file-saver";
-
+import { useTranslation } from "react-i18next";
 const about = () => {
+  const { t } = useTranslation();
   const saveFile = () => {
     saveAs(
       "https://www.cakeresume.com/pdf/s--ZlxUgAxvYYGQt7FXR3kPUw--/MMOEx.pdf",
@@ -19,41 +21,43 @@ const about = () => {
       <div className={styles.container}>
         <div className={styles.title}>
           <h1>
-            ABOUT <span>ME</span>
+            {t("About_about")} <span> {t("About_me")} </span>
           </h1>
         </div>
         <div className={styles.flex_box}>
           <div className={styles.person}>
             <div>
-              <h2>PERSONAL INFOS</h2>
+              <h2>{t("About_PERSONAL")}</h2>
               <div className={styles.person_ifo}>
                 <ul>
                   <li>
-                    First Name :<span> Robby</span>
+                    {t("About_First_Name")}:<span> {t("About_Robby")} </span>
                   </li>
                   <li>
-                    Last Name : <span>Hong</span>
+                    {t("About_Last_Name")}: <span>{t("About_Hong")} </span>
                   </li>
                   <li>
-                    Age : <span>23 Years</span>
+                    {t("About_Age")} : <span>{t("About_Years")} </span>
                   </li>
 
                   <li>
-                    langages : <span>Chinese , English</span>
+                    {t("About_langages")} :
+                    <span>{t("About_Chinese_English")} </span>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    Address : <span>Taoyuan , Taipei</span>
+                    {t("About_Address")} :
+                    <span>{t("About_Taoyuan_Taipei")} </span>
                   </li>
                   <li>
-                    Nationality : <span>Taiwan</span>
+                    {t("About_Nationality")} : <span>{t("About_Taiwan")} </span>
                   </li>
                   <li>
-                    Phone : <span>0975657713</span>
+                    {t("About_Phone")} : <span>0975657713</span>
                   </li>
                   <li>
-                    email : <span>sky0975657713@gmail.com</span>
+                    {t("About_email")} : <span>sky0975657713@gmail.com</span>
                   </li>
                 </ul>
               </div>
@@ -75,7 +79,7 @@ const about = () => {
         </div>
 
         <div className={styles.skill}>
-          <h2>MY SKILLS</h2>
+          <h2>{t("About_MY_SKILLS")}</h2>
           <ul>
             <li>
               <div className={styles.skill_title}>Front-end</div>
@@ -112,7 +116,7 @@ const about = () => {
         </div>
 
         <div className={styles.experience}>
-          <h2>EXPERIENCE & EDUCATION</h2>
+          <h2>{t("About_EXPERIENCE_EDUCATION")}</h2>
           <div className={styles.flex}>
             <ul>
               <li>
@@ -127,17 +131,14 @@ const about = () => {
                 <div className={styles.experience_content}>
                   <span className={styles.experience_year}>2021 ~ PRESENT</span>
                   <div className={styles.experience_flex}>
-                    <h3>Frontend Developer</h3>
+                    <h3>{t("About_EXPERIENCE_TITLE")}</h3>
                     <span className={styles.experience_detail}>
-                      - Shoalter Technology
+                      {t("About_EXPERIENCE_NAME")}
                     </span>
                   </div>
 
-                  <p>
-                    - 與 PM 和 UX/UI
-                    溝通來完成電商業⾯與後台CMS⾴⾯開發需求和⽬標功能
-                  </p>
-                  <p>- 與後端⼈員溝通合作來完成CMS後台⾴⾯開發與串接API</p>
+                  <p>{t("About_EXPERIENCE_text_1")} </p>
+                  <p>{t("About_EXPERIENCE_text_2")}</p>
                 </div>
               </li>
             </ul>
@@ -154,15 +155,12 @@ const about = () => {
                 <div className={styles.experience_content}>
                   <span className={styles.experience_year}>2017 ~ 2021</span>
                   <div className={styles.experience_flex}>
-                    <h3>國立勤益科技大學</h3>
+                    <h3>{t("About_EDUCATION_University")}</h3>
                     <span className={styles.experience_detail}>
-                      - 資訊工程學系
+                      {t("About_EDUCATION_department")}
                     </span>
                   </div>
-                  <p>
-                    大學期間有參加系學會參與各個活動，由於參加許多活動與系學會讓我學會規劃一個企劃分配工作等等，
-                    以及與工作夥伴溝通還有臨機應變重要性。
-                  </p>
+                  <p>{t("About_EDUCATION_TEXT")} </p>
                 </div>
               </li>
               <li>
@@ -177,8 +175,10 @@ const about = () => {
                 <div className={styles.experience_content}>
                   <span className={styles.experience_year}>2014 ~ 2017</span>
                   <div className={styles.experience_flex}>
-                    <h3>桃園新興高中</h3>
-                    <span className={styles.experience_detail}>- 資訊科</span>
+                    <h3>{t("About_EDUCATION_HighSchool")}</h3>
+                    <span className={styles.experience_detail}>
+                      {t("About_HighSchool_department")}
+                    </span>
                   </div>
                 </div>
               </li>

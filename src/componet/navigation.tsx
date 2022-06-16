@@ -6,13 +6,14 @@ import HomeOutline from "../image/home-outline.svg";
 import Icons8Portfolio from "../image/icons8-portfolio.png";
 import MailSharp from "../image/mail-outline.png";
 import PersonSharp from "../image/person-outline.png";
-
+import { useTranslation } from "react-i18next";
 interface navigationProp {
   currentTab: string;
   setCurrentTab: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const navigation = ({ currentTab, setCurrentTab }: navigationProp) => {
+  const { t } = useTranslation();
   return (
     <div className={styles.container}>
       <ul>
@@ -25,7 +26,7 @@ const navigation = ({ currentTab, setCurrentTab }: navigationProp) => {
               setCurrentTab("HOME");
             }}
           >
-            <span className={styles.text}>HOME</span>
+            <span className={styles.text}>{t("navigation_HOME")}</span>
             <span className={styles.icon}>
               <Image
                 src={HomeOutline}
@@ -45,7 +46,7 @@ const navigation = ({ currentTab, setCurrentTab }: navigationProp) => {
               setCurrentTab("ABOUT");
             }}
           >
-            <span className={styles.text}>ABOUT</span>
+            <span className={styles.text}>{t("navigation_ABOUT")}</span>
             <span className={styles.icon}>
               <Image
                 src={PersonSharp}
@@ -67,7 +68,7 @@ const navigation = ({ currentTab, setCurrentTab }: navigationProp) => {
               setCurrentTab("PORTFOLIO");
             }}
           >
-            <span className={styles.text}>PORTFOLIO</span>
+            <span className={styles.text}>{t("navigation_PORTFOLIO")}</span>
             <span className={styles.icon}>
               <Image
                 src={Icons8Portfolio}
@@ -89,7 +90,7 @@ const navigation = ({ currentTab, setCurrentTab }: navigationProp) => {
               setCurrentTab("CONTACT");
             }}
           >
-            <span className={styles.text}>CONTACT</span>
+            <span className={styles.text}>{t("navigation_CONTACT")}</span>
             <span className={styles.icon}>
               <Image
                 src={MailSharp}
