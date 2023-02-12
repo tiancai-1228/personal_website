@@ -30,7 +30,6 @@ const index: NextPage = () => {
   };
 
   useEffect(() => {
-    console.log(isChecked);
     if (!isChecked) {
       i18n.changeLanguage("en");
     }
