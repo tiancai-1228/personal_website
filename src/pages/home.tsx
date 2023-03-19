@@ -35,7 +35,7 @@ const home = ({ setCurrentTab }: homeProp) => {
                 words={[`-${t("Home_Logo")}-`]}
                 loop={false}
                 cursor
-                cursorStyle=""
+                cursorStyle="_"
                 typeSpeed={100}
                 deleteSpeed={50}
                 delaySpeed={5000}
